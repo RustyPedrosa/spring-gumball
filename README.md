@@ -15,11 +15,10 @@ https://github.com/nguyensjsu/cmpe172-rustypedrosa/tree/main/labs/lab10
 - Created Java Gradle CI: [.github/workflows/gradle.yml](.github/workflows/gradle.yml)
 ![](images/create-gradle-ci-yaml.png)
 
+- CI action failed after pushing a commit:
+![ci-action-fail.png](images/ci-action-fail.png)
 
-Make a change to the code and commit to *main* branch to trigger the action.  Take screenhots of your result.
-
-![github-action-build-resuts.png](images/github-action-build-resuts.png)
-
+- Looks like we didn't keep the spring-gumball parent folder this time around.  Decided to move all the files up rather than fix all the action files.
 
 ## CD Workflow
 
