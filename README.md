@@ -73,7 +73,9 @@ env:
 ```
 
 - Moved GKE CD yml files to repo root
-
+- First attempt failed - had to go back and recreate the service account with more permissions
+  - Kubernetes Engine Developer - allows deploying to GKE
+  - Storage Admin - allows publishing to Container Registry
 4. Trigger a CD Deployment by creating a new GitHub Release
 
 * Note:  
