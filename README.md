@@ -72,6 +72,8 @@ env:
   ...
 ```
 
+- Moved GKE CD yml files to repo root
+
 4. Trigger a CD Deployment by creating a new GitHub Release
 
 * Note:  
