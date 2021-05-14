@@ -55,6 +55,7 @@ jobs:
 
 - Started a new GKE cluster for lab10
 - Placed kustomization.yml, deployment.yaml, service.yaml into resources folder
+  - I undid this later
 
 - Created GCP service account and generated key
 ![](images/gcp-service-account-create.png)
@@ -72,28 +73,33 @@ env:
   ...
 ```
 
-- Moved GKE CD yml files to repo root
+- Moved everything from resources folder back to repo root
+
 - First attempt failed - had to go back and recreate the service account with more permissions
   - Kubernetes Engine Developer - allows deploying to GKE
   - Storage Admin - allows publishing to Container Registry
-4. Trigger a CD Deployment by creating a new GitHub Release
 
-* Note:  
-	* Confirm the Pods and Service have been Deployed to your GKE Cluster
-	* Set up a External Facing Load Balancer and Test the Gumball Spring App
-	* Web UI should come up on Load Balancer's External IP (as follows)
+- Working now!
 
-
+- Clusters:
 ![deploy1.png](images/deploy1-clusters.png)
-![deploy2.png](images/deploy2.png)
-![deploy3.png](images/deploy3.png)
-![deploy4.png](images/deploy4.png)
-![deploy5.png](images/deploy5.png)
-![deploy6.png](images/deploy6.png)
-![deploy7.png](images/deploy7.png)
-![deploy8.png](images/deploy8.png)
-![deploy9.png](images/deploy9.png)
-![deploy10.png](images/deploy10.png)
-![deploy11.png](images/deploy11.png)
-![deploy12.png](images/deploy12.png)
-![deploy13.png](images/deploy13.png)
+- Releases:
+![deploy2.png](images/deploy2-releases.png)
+- This release:
+![deploy3.png](images/deploy3-release.png)
+- Skipped image of actions page before running
+- Skipped images of action mid-run (I was too slow)
+- CD action completed:
+![deploy7.png](images/deploy5-6-7-cd-action.png)
+- Actions page after CD completed:
+![deploy8.png](images/deploy4-8-actions.png)
+- Workloads:
+![deploy9.png](images/deploy9-workloads.png)
+- Services (forgot and had to take this screenshot later):
+![deploy10.png](images/deploy10-services.png)
+- Configuring the ingress:
+![deploy11.png](images/deploy11-ingress-create.png)
+- Ingress created.. not bothering to wait for it to fully start since...
+![deploy12.png](images/deploy12-ingress-created.png)
+- ... the gumball page came up after a few minutes
+![deploy13.png](images/deploy13-gumball.png)
