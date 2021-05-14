@@ -22,11 +22,13 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     - name: Check project path
-      run: pwd
-      run: ls
+      run: |
+        pwd
+        ls
     - name: Open project folder
-      run: cd spring-gumball
-      run: ls
+      run: |
+        cd spring-gumball
+        ls
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
