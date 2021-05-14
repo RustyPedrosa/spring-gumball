@@ -25,6 +25,10 @@ jobs:
       run: chmod +x spring-gumball/gradlew
     - name: Build with Gradle
       run: ./spring-gumball/gradlew build
+    - name: Where are we
+      run: pwd
+    - name: Whats here
+      run: ls
     - name: Build Result
       run: ls spring-gumball/build/libs
     - name: Upload a Build Artifact
