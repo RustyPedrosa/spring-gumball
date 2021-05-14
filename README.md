@@ -19,7 +19,18 @@ https://github.com/nguyensjsu/cmpe172-rustypedrosa/tree/main/labs/lab10
 ![ci-action-fail.png](images/ci-action-fail.png)
 
 - Looks like we didn't keep the spring-gumball parent folder this time around.  Decided to move all the files up rather than fix all the action files.
+- Got another error
+```
+Run ./gradlew build
+Error: Could not find or load main class org.gradle.wrapper.GradleWrapperMain
+Caused by: java.lang.ClassNotFoundException: org.gradle.wrapper.GradleWrapperMain
+Error: Process completed with exit code 1.
+```
+- Regenerated missing folder via `gradle wrapper` - looks like stuff got lost because of the initial .gitignore
+- Looks like it kinda succeeded, except for some post run cleanup?
+![ci-kinda-success.png](images/ci-kinda-success.png)
 
+- Try moving back to subfolder one more time to make re-use for group project easier
 ## CD Workflow
 
 * https://github.com/google-github-actions/setup-gcloud/tree/master/example-workflows/gke
@@ -32,7 +43,7 @@ Do the following to configure and launch a new GKE cluster in preparation for th
 
 1. Ensure that your repository contains the necessary configuration for your Google Kubernetes Engine cluster, including deployment.yml, kustomization.yml, service.yml, etc.
 
-* kustomization.yml
+* kustomization.yaml
 
 ```
 apiVersion: kustomize.config.k8s.io/v1beta1

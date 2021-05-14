@@ -22,13 +22,13 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+      run: chmod +x spring-gumball/gradlew
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./spring-gumball/gradlew build
     - name: Build Result
-      run: ls build/libs
+      run: ls spring-gumball/build/libs
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.3
       with:
         name: spring-gumball
-        path: build/libs/spring-gumball-2.0.jar
+        path: spring-gumball/build/libs/spring-gumball-2.0.jar
